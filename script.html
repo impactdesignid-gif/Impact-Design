@@ -1,0 +1,151 @@
+<script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci ! Votre message a bien été envoyé.');
+            this.reset();
+        });
+
+        function animateCounter(el, target) {
+            const duration = 1500;
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const value = Math.floor(progress * target);
+                el.textContent = value;
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        const counters = document.querySelectorAll('.stat-counter');
+        const statsSection = document.getElementById('statistiques');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'), 10);
+                        animateCounter(counter, target);
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        /* Panier et accordéon services */
+        const cart = [];
+        const cartCount = document.getElementById('cart-count');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotalEl = document.getElementById('cart-total');
+
+        function refreshCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center gap-4';
+
+                const text = document.createElement('span');
+                text.textContent = `${item.service} - ${item.item} (${item.price} FCFA)`;
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'text-red-600 hover:text-red-800 text-sm font-semibold';
+                removeBtn.textContent = 'Retirer';
+                removeBtn.addEventListener('click', () => {
+                    cart.splice(index, 1);
+                    refreshCart();
+                });
+
+                li.appendChild(text);
+                li.appendChild(removeBtn);
+                cartItems.appendChild(li);
+
+                total += Number(item.price || 0);
+            });
+            cartCount.textContent = cart.length;
+            cartTotalEl.textContent = `Total : ${total} FCFA`;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const service = button.getAttribute('data-service');
+                const container = button.closest('.service-content');
+                let added = 0;
+                container.querySelectorAll('.service-option:checked').forEach(checkbox => {
+                    const item = checkbox.getAttribute('data-item');
+                    const price = Number(checkbox.getAttribute('data-price') || 0);
+                    cart.push({ service, item, price });
+                    added += 1;
+                });
+                if (added > 0) {
+                    refreshCart();
+                    alert(`${added} service(s) ajoutés au panier !`);
+                } else {
+                    alert('Veuillez sélectionner au moins un service avant d\'ajouter au panier.');
+                }
+            });
+        });
+
+        document.querySelectorAll('.toggle-service').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const service = btn.getAttribute('data-service');
+                const panel = document.getElementById(`service-${service}`);
+                panel.classList.toggle('hidden');
+                btn.textContent = panel.classList.contains('hidden') ? 'Voir' : 'Cacher';
+            });
+        });
+
+        document.getElementById('cart-button').addEventListener('click', () => {
+            const msg = cart.length ? 'Panier mis à jour avec ' + cart.length + ' articles.' : 'Le panier est vide.';
+            alert(msg);
+        });
+
+        const devisForm = document.getElementById('devis-form');
+        const devisMessage = document.getElementById('devis-message');
+
+        if (devisForm) {
+            devisForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const summary = [
+                    'Nouvelle demande de devis (automatique)',
+                    '--',
+                    `Nom : ${formData.get('nom')}`,
+                    `Email : ${formData.get('email')}`,
+                    `Entreprise/Projet : ${formData.get('entreprise')}`,
+                    `Service : ${formData.get('type_service')}`,
+                    `Budget : ${formData.get('budget')}`,
+                    `Délais : ${formData.get('delai')}`,
+                    `Description : ${formData.get('message')}`
+                ].join('\n');
+
+                console.log(summary); // � FCFA remplacer par envoi réel vers API/back-end
+                devisMessage.textContent = 'Merci ! Votre demande de devis a bien été enregistrée : nous revenons vers vous sous 24 h.';
+                devisMessage.classList.remove('hidden');
+                devisForm.reset();
+            });
+        }
+
+        document.getElementById('submit-cart').addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Votre panier est vide, veuillez ajouter des services avant de soumettre.');
+                return;
+            }
+            const recap = cart.map((item, idx) => `${idx + 1}. ${item.service} - ${item.item} (${item.price}€)`).join('\n');
+            const total = cart.reduce((sum, item) => sum + Number(item.price || 0), 0);
+            const confirmMessage = `Résumé du panier :\n${recap}\n\nTotal : ${total} FCFA\n\nSouhaitez-vous envoyer la commande ?`;
+            if (confirm(confirmMessage)) {
+                alert('Votre commande a été envoyée. Nous vous contacterons bientôt.');
+                cart.length = 0;
+                refreshCart();
+            }
+        });
+    </script>

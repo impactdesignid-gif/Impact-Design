@@ -1,0 +1,752 @@
+﻿<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Design</title>
+    <link rel="icon" type="image/png" href="image/Logo icône.png">
+    <meta name="description" content="Impact Design : agence en communication visuelle, marketing digital, design web et consulting en Côte d'Ivoire. Devis gratuit en ligne.">
+    <meta name="keywords" content="graphisme, web design, community management, marketing, Côte d'Ivoire, télécom, branding">
+    <meta property="og:title" content="Impact Design - Accueil" />
+    <meta property="og:description" content="Agence créative spécialisée dans l'identité visuelle et la stratégie digitale en Afrique francophone." />
+    <meta property="og:image" content="image/Logo blanc.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://impactdesignid.example.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        html { font-size: 14px; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; }
+    </style>
+    <!-- Tailwind CSS pour la mise en page rapide -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome pour les icônes de la maquette -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Liaison avec votre fichier CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-[#04001b] shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold leading-tight">
+                    <!-- LOGO -->
+                                        <img src="image/Logo blanc.png" alt="Logo Impact Design" class="h-10 w-auto" />
+                <div class="font-bold text-xl">
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Menu Principal -->
+            <div class="hidden md:flex space-x-8 font-medium" id="main-nav">
+                <a href="#accueil" aria-label="Accueil" class="text-white hover:text-blue-400 transition">Accueil</a>
+                <a href="#services" aria-label="Services" class="text-white hover:text-blue-400 hover:font-bold transition">Services</a>
+                <a href="#contacts" aria-label="Contacts" class="text-white hover:text-blue-400 transition">Contacts</a>
+                <a href="#apropos" aria-label="À propos" class="text-white hover:text-blue-400 transition">À propos</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+2250706297152"
+                   class="text-white px-6 py-2 rounded-full transition flex items-center gap-2 bg-gradient-to-r from-[#03e1f5] to-[#4148e7] hover:from-[#14cade] hover:to-[#333fd8]">
+                    <i class="fas fa-phone-alt"></i> +225 07 06 297 152
+                </a>
+                <button id="cart-button" class="text-white p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition flex items-center gap-2">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+
+            <!-- Bouton Menu Mobile -->
+            <button class="md:hidden text-2xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECTION HERO (ACCUEIL) -->
+    <section id="accueil" class="relative h-screen flex items-center justify-center text-center px-6 pt-20 overflow-hidden">
+        <img src="image/image accueil.jpg" alt="Image de couverture" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 max-w-4xl text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Transformer vos idées<br>en <span class="bg-gradient-to-r from-[#03e1f5] to-[#4148e7] text-transparent bg-clip-text">résultats concrets</span>
+            </h1>
+            <p class="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
+                Nous créons des solutions visuelles et stratégiques pour propulser votre entreprise vers de nouveaux sommets.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">Nos Services</a>
+                <a href="#contacts" class="bg-white text-gray-900 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">Nous contacter</a>                <a href="#devis" class="bg-gradient-to-r from-[#03e1f5] to-[#4148e7] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:from-[#14cade] hover:to-[#333fd8] transition">Demander un devis gratuit</a>            </div>
+        </div>
+    </section>
+
+    <!-- SECTION DEVIS GRATUIT -->
+    <section id="devis" class="py-10 bg-gradient-to-r from-[#03e1f5] to-[#4148e7] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-3">Obtenez votre devis 100% gratuit</h2>
+            <p class="max-w-2xl mx-auto mb-4 text-sm">Répondez à quelques questions simples et recevez une estimation rapide sous 24 heures.</p>
+            <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-[#04001b] px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">Accéder au formulaire de contact <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4 uppercase tracking-widest text-blue-600">Nos Services</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-pen-nib text-blue-600 mr-2"></i>Graphique Design</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="graphique">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Catégories métier regroupées pour une vue claire et compacte.</p>
+                    <div class="service-content hidden" id="service-graphique">
+                        <div class="grid gap-4">
+                            <details class="border rounded-lg p-3 bg-gray-50">
+                                <summary class="font-semibold">1. Identité Visuelle (Le cœur du métier)</summary>
+                                <div class="pl-4 mt-2 space-y-1 text-sm">
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Création de Logo" data-price="30000"> Création de Logo (30 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Charte Graphique" data-price="80000"> Charte Graphique (80 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Refonte de Logo" data-price="40000"> Refonte de Logo (40 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Branding Complet" data-price="150000"> Branding Complet (150 000 FCFA)</label>
+                                </div>
+                            </details>
+                            <details class="border rounded-lg p-3 bg-gray-50">
+                                <summary class="font-semibold">2. Supports de Communication Print (Papier)</summary>
+                                <div class="pl-4 mt-2 space-y-1 text-sm">
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Cartes de Visite" data-price="90"> Cartes de Visite (15 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Affiches et Flyers" data-price="110"> Affiches et Flyers (15 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Dépliants / Brochures" data-price="130"> Dépliants / Brochures (30 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Papeterie" data-price="80"> Papeterie (40 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Packaging" data-price="140"> Packaging (80 000 FCFA)</label>
+                                </div>
+                            </details>
+                            <details class="border rounded-lg p-3 bg-gray-50">
+                                <summary class="font-semibold">3. Graphisme Digital (Web & Réseaux Sociaux)</summary>
+                                <div class="pl-4 mt-2 space-y-1 text-sm">
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Vignettes" data-price="5000"> Vignettes (Thumbnails) (5 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Bannières" data-price="20000"> Bannières (20 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Templates Réseaux Sociaux" data-price="40000"> Templates Réseaux Sociaux (40 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Infographies" data-price="30000"> Infographies (30 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Publicités Digitales" data-price="30000"> Publicités Digitales (Ads) (30 000 FCFA)</label>
+                                </div>
+                            </details>
+                            <details class="border rounded-lg p-3 bg-gray-50">
+                                <summary class="font-semibold">4. Édition</summary>
+                                <div class="pl-4 mt-2 space-y-1 text-sm">
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Mise en page de livre" data-price="70000"> Mise en page de livre / E-book (70 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Catalogues produits" data-price="80000"> Catalogues produits (80 000 FCFA)</label><br>
+                                    <label class="inline-flex items-center gap-2"><input type="checkbox" class="service-option" data-service="Graphique Design" data-item="Rapports annuels" data-price="120000"> Rapports annuels (120 000 FCFA)</label>
+                                </div>
+                            </details>
+                        </div>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Graphique Design">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-users text-blue-600 mr-2"></i>Community Management</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="community">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Gestion de vos réseaux sociaux pour engager votre audience.</p>
+                    <div class="service-content hidden" id="service-community">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Community Management" data-item="Création de contenu" data-price="50000"> Création de contenu (50 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Community Management" data-item="Animation de communauté" data-price="40000"> Animation de communauté (40 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Community Management" data-item="Publicités" data-price="50000"> Publicités (50 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Community Management">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-chart-line text-blue-600 mr-2"></i>Stratégie Marketing</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="strategie">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Planification stratégique pour atteindre vos objectifs commerciaux.</p>
+                    <div class="service-content hidden" id="service-strategie">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Stratégie Marketing" data-item="Audit marketing" data-price="60000"> Audit marketing (60 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Stratégie Marketing" data-item="Positionnement" data-price="50000"> Positionnement (50 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Stratégie Marketing" data-item="Campagnes" data-price="90000"> Campagnes (90 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Stratégie Marketing">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>Fiche Google Maps</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="googlemaps">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Optimisation de votre visibilité locale et SEO.</p>
+                    <div class="service-content hidden" id="service-googlemaps">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Fiche Google Maps" data-item="Création fiche" data-price="25000"> Création fiche (25 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Fiche Google Maps" data-item="Optimisation SEO" data-price="30000"> Optimisation SEO (30 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Fiche Google Maps" data-item="Gestion avis" data-price="25000"> Gestion avis (25 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Fiche Google Maps">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-video text-blue-600 mr-2"></i>Montage Vidéo</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="video">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Production de contenus vidéos dynamiques et professionnels.</p>
+                    <div class="service-content hidden" id="service-video">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Montage Vidéo" data-item="Captation" data-price="60000"> Captation (60 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Montage Vidéo" data-item="Montage" data-price="25000"> Montage (25 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Montage Vidéo" data-item="Post-production" data-price="60000"> Post-production (60 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Montage Vidéo">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-lightbulb text-blue-600 mr-2"></i>Consulting</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="consulting">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Conseils experts pour votre croissance numérique.</p>
+                    <div class="service-content hidden" id="service-consulting">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Consulting" data-item="Audit" data-price="60000"> Audit (60 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Consulting" data-item="Stratégie" data-price="90000"> Stratégie (90 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Consulting" data-item="Accompagnement" data-price="40000"> Accompagnement (40 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Consulting">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl border p-6 shadow-sm text-left">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold"><i class="fas fa-laptop-code text-blue-600 mr-2"></i>Conception de Site Web</h3>
+                        <button class="toggle-service text-blue-600 font-semibold" data-service="web">Voir</button>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Création de sites web modernes, responsive et optimisés pour le SEO et lexpérience utilisateur.</p>
+                    <div class="service-content hidden" id="service-web">
+                        <p class="font-semibold mb-2">Choisissez les prestations :</p>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Conception de Site Web" data-item="Site vitrine" data-price="120000"> Site vitrine (120 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Conception de Site Web" data-item="Site e-commerce" data-price="250000"> Site e-commerce (250 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Conception de Site Web" data-item="Maintenance & SEO" data-price="30000"> Maintenance & SEO (30 000 FCFA)</label><br>
+                        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" class="service-option" data-service="Conception de Site Web" data-item="Hébergement & Domaine" data-price="30000"> Hébergement & Domaine (30 000 FCFA)</label><br>
+                        <button class="add-to-cart btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-3" data-service="Conception de Site Web">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PANIER -->
+    <section id="panier" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white p-6 rounded-3xl border shadow-sm text-left">
+                <h3 class="text-2xl font-bold mb-4">Panier</h3>
+                <ul id="cart-items" class="list-disc pl-5 text-gray-700 mb-4"></ul>
+                <div id="cart-total" class="text-xl font-bold mb-4">Total : 0 FCFA</div>
+                <button id="submit-cart" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">Envoyer / Soumettre</button>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- SECTION STATISTIQUES -->
+    <section id="statistiques" class="py-16 text-white" style="background-color: #04001b;">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="text-5xl font-bold mb-2"><span class="stat-counter" data-target="150">0</span>+</div>
+                    <p class="text-blue-100 uppercase tracking-wide font-semibold">Projets Complets</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2"><span class="stat-counter" data-target="4">1</span> Ans+</div>
+                    <p class="text-blue-100 uppercase tracking-wide font-semibold">Années d'Expérience</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold mb-2"><span class="stat-counter" data-target="150">0</span>+</div>
+                    <p class="text-blue-100 uppercase tracking-wide font-semibold">Clients Satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PARTENAIRES & CONFIANCE -->
+    <section id="confiance" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Ils nous font confiance</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center mb-12">
+                <img src="image/partner1.png" alt="Partenaire 1" class="mx-auto h-16 object-contain" loading="lazy">
+                <img src="image/partner2.png" alt="Partenaire 2" class="mx-auto h-16 object-contain" loading="lazy">
+                <img src="image/partner3.png" alt="Partenaire 3" class="mx-auto h-16 object-contain" loading="lazy">
+                <img src="image/partner4.png" alt="Partenaire 4" class="mx-auto h-16 object-contain" loading="lazy">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#f5f7ff] rounded-2xl p-6 text-left">
+                    <h3 class="text-xl font-bold mb-3">100% Satisfaction</h3>
+                    <p class="text-gray-600">Garantie de qualité visuelle et stratégique avec retours illimités.</p>
+                </div>
+                <div class="bg-[#f5f7ff] rounded-2xl p-6 text-left">
+                    <h3 class="text-xl font-bold mb-3">Délais respectés</h3>
+                    <p class="text-gray-600">Notre méthodologie agile garantit une livraison rapide et fiable.</p>
+                </div>
+                <div class="bg-[#f5f7ff] rounded-2xl p-6 text-left">
+                    <h3 class="text-xl font-bold mb-3">Support inclus</h3>
+                    <p class="text-gray-600">Accompagnement post-livraison pendant 30 jours offert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION À PROPOS -->
+    <section id="apropos" class="py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="image/Bureau.jpg" alt="Bureau Impact Design" class="rounded-3xl shadow-xl" loading="lazy">
+            </div>
+            <div class="md:w-1/2 text-left">
+                <h2 class="text-3xl font-bold mb-6 uppercase">À propos de <span class="text-blue-600 font-extrabold">Impact Design</span></h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Impact Design accompagne les entreprises de Côte d'Ivoire et d'Afrique francophone dans la construction d'une identité visuelle forte, la stratégie digitale et le marketing de contenu. Notre équipe multidisciplinaire propose des solutions sur mesure, de la création de logo à la gestion complète de campagnes, pour garantir une présence cohérente et performante sur tous les canaux.
+                </p>
+                <a href="#contacts" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION AVIS CLIENTS -->
+    <section id="avis" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-6">Ce que disent nos clients</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="bg-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="image/Amina K.jpg" alt="Amina K" class="h-16 w-16 rounded-full border-2 border-blue-600 mr-3 object-cover">
+                        <div>
+                            <p class="font-semibold">Amina K.</p>
+                            <p class="text-sm text-gray-500">Fondatrice</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Equipe pro, résultat impeccable et délais respectés. Je recommande Impact Design pour votre branding."</p>
+                </article>
+                <article class="bg-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="image/Boli Emmanuel.jpg" alt="Boli Emmanuel" class="h-16 w-16 rounded-full border-2 border-blue-600 mr-3 object-cover">
+                        <div>
+                            <p class="font-semibold">Boli Emmanuel</p>
+                            <p class="text-sm text-gray-500">Responsable Marketing</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Très bonne communication et accompagnement sur toute la stratégie digitale. Un vrai plus pour notre visibilité."</p>
+                </article>
+                <article class="bg-white rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="image/Zou Noëlle.jpg" alt="Zou Noëlle" class="h-16 w-16 rounded-full border-2 border-blue-600 mr-3 object-cover">
+                        <div>
+                            <p class="font-semibold">Zou Noëlle</p>
+                            <p class="text-sm text-gray-500">CEO</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 mb-4 text-yellow-400">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Bonne réactivité et créatifs. Le design du logo a été très apprécié par nos clients."</p>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 472045 -->
+    <section id="contacts" class="py-10 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row md:items-start md:max-h-[560px]">
+                <!-- Info de Gauche -->
+                <div class="md:w-5/5 bg-gradient-to-r from-[#4148e7] to-[#03e1f5] p-6 text-white h-full md:h-full flex flex-col justify-between">
+                    <h3 class="text-xl font-bold mb-4">Nos Coordonnées</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-phone-alt mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Téléphone</p>
+                                <p>+225 07 06 297 152</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope mt-1"></i>
+                            <div>
+                                <p class="font-bold">Email</p>
+                                <p>impact.design.id@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div>
+                                <p class="font-bold">Horaires</p>
+                                <p>Lundi - Vendredi : 7h30 - 17h30</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <div>
+                                <p class="font-bold">Localisation</p>
+                                <p>2 Plateaux, Cocody, Abidjan, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulaire de Droite -->
+                <div class="md:w-3/5 p-6 max-h-[220px] overflow-y-auto">
+                    <form action="mailto:votre-email@exemple.com" method="GET" enctype="text/plain" id="contact-form" class="space-y-2 text-sm">
+                        <h3 class="text-xl font-bold mb-3">Demande de devis</h3>
+                        <div class="mb-3">
+                            <label class="block text-xs font-semibold mb-1" for="nom">Nom complet</label>
+                            <input id="nom" name="nom" type="text" placeholder="Entrez votre nom" class="w-full border p-2 rounded-lg focus:outline-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="exemple@client.com" class="w-full border p-3 rounded-lg focus:outline-blue-600" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="entreprise">Entreprise / Projet</label>
+                            <input id="entreprise" name="entreprise" type="text" placeholder="Nom de votre entreprise" class="w-full border p-3 rounded-lg focus:outline-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="type_service">Service souhaité</label>
+                            <select id="type_service" name="type_service" class="w-full border p-3 rounded-lg focus:outline-blue-600" required>
+                                <option value="">Choisissez un service</option>
+                                <option value="Graphique Design">Graphique Design</option>
+                                <option value="Community Management">Community Management</option>
+                                <option value="Stratégie Marketing">Stratégie Marketing</option>
+                                <option value="Fiche Google Maps">Fiche Google Maps</option>
+                                <option value="Montage Vidéo">Montage Vidéo</option>
+                                <option value="Consulting">Consulting</option>
+                                <option value="Conception de Site Web">Conception de Site Web</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="budget">Budget estimé</label>
+                            <input id="budget" name="budget" type="text" placeholder="Ex: 2500 FCFA - 1 000 000 FCFA" class="w-full border p-3 rounded-lg focus:outline-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="delai">Délais souhaités</label>
+                            <input id="delai" name="delai" type="text" placeholder="Ex: 2 semaines" class="w-full border p-3 rounded-lg focus:outline-blue-600">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold mb-2" for="message">Description du projet</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Objectifs, public cible, inspirations..." class="w-full border p-3 rounded-lg focus:outline-blue-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">
+                            Envoyer la demande de devis
+                        </button>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--  envoi panier whatsapp -->
+    <div id="email-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100]">
+    <div class="bg-white p-6 rounded-xl w-80 shadow-2xl">
+        <h3 class="text-lg font-bold mb-4 text-blue-600">Finaliser ma demande</h3>
+
+        <div class="space-y-4">
+            <div>
+                <label class="block text-xs font-semibold mb-1">Votre Email</label>
+                <input type="email" id="client-email"
+                    class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400 outline-none"
+                    placeholder="exemple@gmail.com">
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold mb-1">Numéro WhatsApp</label>
+                <input type="tel" id="client-whatsapp"
+                    class="w-full border p-2 rounded focus:ring-2 focus:ring-green-400 outline-none"
+                    placeholder="Ex: 0706297152">
+            </div>
+
+            <button id="confirm-send"
+                class="bg-blue-600 text-white font-bold px-4 py-3 rounded-lg w-full hover:bg-blue-700 transition">
+                <i class="fab fa-whatsapp mr-2"></i> Envoyer sur WhatsApp
+            </button>
+            
+            <button onclick="document.getElementById('email-modal').classList.add('hidden')" 
+                class="w-full text-gray-50 text-xs mt-2 underline">Annuler</button>
+        </div>
+    </div>
+</div>
+
+
+    <!-- PIED DE PAGE -->
+    <footer class="bg-[#04001b] text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <img src="image/Logo blanc.png" alt="Impact Design Logo" class="h-12 w-auto mb-4" />
+                <p class="text-gray-400 text-sm">Transformer vos idées en résultats concrets.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase">Navigation</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#accueil" class="hover:text-white transition">Accueil</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#contacts" class="hover:text-white transition">Contacts</a></li>
+                    <li><a href="#apropos" class="hover:text-white transition">À propos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase">Legal</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="mentionlegale.html" class="hover:text-white transition">Mentions légales</a></li>
+                    <li><a href="mentionlegale.html" class="hover:text-white transition">Politique de confidentialité</a></li>
+                    <li><a href="mentionlegale.html" class="hover:text-white transition">Cookies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase">Services</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li>Graphique Design</li>
+                    <li>Community Management</li>
+                    <li>Stratégie Marketing</li>
+                    <li>Fiche Google Maps</li>
+                    <li>Montage Vidéo</li>
+                    <li>Consulting</li>
+                    <li>Conception de Site Web</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase">Restons Connectés</h4>
+                <div class="flex space-x-4 mb-6">
+                    <a href="https://www.facebook.com/share/1AT1xMhaR2/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/impactdesignid" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2250706297152" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-500 transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@impactdesignid" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-black transition" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/impactdesignid" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="flex">
+                    <input type="email" placeholder="Votre email" class="bg-gray-800 p-2 rounded-l-lg w-full outline-none text-sm">
+                    <button class="bg-blue-600 px-4 rounded-r-lg font-bold">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
+            &copy; 2024 IMPACT DESIGN. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- Script simple pour le formulaire et statistique -->
+    <script>
+        
+
+        function animateCounter(el, target) {
+            const duration = 1500;
+            const start = 0;
+            const startTime = performance.now();
+
+            function update(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const value = Math.floor(progress * target);
+                el.textContent = value;
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        const counters = document.querySelectorAll('.stat-counter');
+        const statsSection = document.getElementById('statistiques');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'), 10);
+                        animateCounter(counter, target);
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        /* Panier et accordéon services */
+        const cart = [];
+        const cartCount = document.getElementById('cart-count');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotalEl = document.getElementById('cart-total');
+
+        function refreshCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center gap-4';
+
+                const text = document.createElement('span');
+                text.textContent = `${item.service} - ${item.item} (${item.price} FCFA)`;
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'text-red-600 hover:text-red-800 text-sm font-semibold';
+                removeBtn.textContent = 'Retirer';
+                removeBtn.addEventListener('click', () => {
+                    cart.splice(index, 1);
+                    refreshCart();
+                });
+
+                li.appendChild(text);
+                li.appendChild(removeBtn);
+                cartItems.appendChild(li);
+
+                total += Number(item.price || 0);
+            });
+            cartCount.textContent = cart.length;
+            cartTotalEl.textContent = `Total : ${total} FCFA`;
+        }
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const service = button.getAttribute('data-service');
+                const container = button.closest('.service-content');
+                let added = 0;
+                container.querySelectorAll('.service-option:checked').forEach(checkbox => {
+                    const item = checkbox.getAttribute('data-item');
+                    const price = Number(checkbox.getAttribute('data-price') || 0);
+                    cart.push({ service, item, price });
+                    added += 1;
+                });
+                if (added > 0) {
+                    refreshCart();
+                    alert(`${added} service(s) ajoutés au panier !`);
+                } else {
+                    alert('Veuillez sélectionner au moins un service avant d\'ajouter au panier.');
+                }
+            });
+        });
+
+        document.querySelectorAll('.toggle-service').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const service = btn.getAttribute('data-service');
+                const panel = document.getElementById(`service-${service}`);
+                panel.classList.toggle('hidden');
+                btn.textContent = panel.classList.contains('hidden') ? 'Voir' : 'Cacher';
+            });
+        });
+
+        document.getElementById('cart-button').addEventListener('click', () => {
+            const msg = cart.length ? 'Panier mis à jour avec ' + cart.length + ' articles.' : 'Le panier est vide.';
+            alert(msg);
+        });
+
+        const devisForm = document.getElementById('devis-form');
+        const devisMessage = document.getElementById('devis-message');
+
+        if (devisForm) {
+            devisForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const summary = [
+                    'Nouvelle demande de devis (automatique)',
+                    '--',
+                    `Nom : ${formData.get('nom')}`,
+                    `Email : ${formData.get('email')}`,
+                    `Entreprise/Projet : ${formData.get('entreprise')}`,
+                    `Service : ${formData.get('type_service')}`,
+                    `Budget : ${formData.get('budget')}`,
+                    `Délais : ${formData.get('delai')}`,
+                    `Description : ${formData.get('message')}`
+                ].join('\n');
+
+                console.log(summary); // � FCFA remplacer par envoi réel vers API/back-end
+                devisMessage.textContent = 'Merci ! Votre demande de devis a bien été enregistrée : nous revenons vers vous sous 24 h.';
+                devisMessage.classList.remove('hidden');
+                devisForm.reset();
+            });
+        }
+
+       
+
+        document.getElementById("submit-cart").addEventListener("click", function () {
+    document.getElementById("email-modal").classList.remove("hidden");
+});
+
+// Ouvrir modal email
+document.getElementById("submit-cart").addEventListener("click", function () {
+    if (cart.length === 0) {
+        alert("Votre panier est vide");
+        return;
+    }
+    document.getElementById("email-modal").classList.remove("hidden");
+});
+
+
+// Envoyer sur WhatsApp
+document.getElementById("confirm-send").addEventListener("click", function () {
+
+    let phone = "2250706297152"; // TON NUMERO DE RECEPTION
+
+    let email = document.getElementById("client-email").value;
+    let whatsappClient = document.getElementById("client-whatsapp").value; // Nouveau champ
+
+    if (email === "" || whatsappClient === "") {
+        alert("Veuillez remplir votre email et votre numéro WhatsApp");
+        return;
+    }
+
+    let recap = cart.map((item, i) =>
+        `- ${item.service} : ${item.item} (${item.price} FCFA)`
+    ).join("\n");
+
+    let total = cart.reduce((sum, item) => sum + Number(item.price || 0), 0);
+
+    // Construction du message avec le numéro du client inclus
+    let message = 
+`NOUVELLE COMMANDE - IMPACT DESIGN
+
+Email : ${email}
+WhatsApp Client : ${whatsappClient}
+
+Détails des services :
+${recap}
+
+TOTAL : ${total} FCFA
+_____________________________
+_Envoyé depuis le site web_`;
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    // Fermer le modal et vider le panier (optionnel)
+    document.getElementById("email-modal").classList.add("hidden");
+});
+
+    </script>
+
+   
+    
+</body>
+</html>
+
+
